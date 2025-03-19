@@ -11,7 +11,7 @@ connectDb();
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-    origin: process.env.frontend_url,
+    origin: [process.env.frontend_url, "https://frontend-client-m6.vercel.app/"]
 }));
 
 app.use("/", (req, res)=>{
