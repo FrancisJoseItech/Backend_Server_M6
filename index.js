@@ -14,9 +14,9 @@ app.use(cors({
     origin: [process.env.frontend_url, "https://frontend-client-m6.vercel.app/"]
 }));
 
-app.use("/", (req, res)=>{
-    res.status(200).json({message:"server hitted"})
-})
+// app.use("/", (req, res)=>{
+//     res.status(200).json({message:"server hitted"})
+// })
 
 app.use("/user", router)
 
