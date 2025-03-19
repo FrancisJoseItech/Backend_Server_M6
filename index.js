@@ -11,10 +11,10 @@ connectDb();
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-    origin: "*",
+    origin: process.env.frontend_url,
 }));
 
-app.use("/getserver", (req, res)=>{
+app.use("/", (req, res)=>{
     res.status(200).json({message:"server hitted"})
 })
 
