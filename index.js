@@ -14,6 +14,9 @@ app.use(cors({
     origin: "*",
 }));
 
+app.use("/getserver", (req, res)=>{
+    res.status(200).json({message:"server hitted"})
+})
 
 app.use("/user", router)
 
